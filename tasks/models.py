@@ -9,8 +9,8 @@ class Task(models.Model):#table name | it should inherit all the table things li
     user=models.ForeignKey(User,on_delete=models.CASCADE)#dajngo woluld automatically add the user_id in database
     title=models.CharField(max_length=255)
     description=models.TextField(blank=True)
-    due_date=models.DateField
-    status=models.CharField(max_length=20,choices=STATUS_CHOICES,default='Pending')
+    due_date=models.DateField()
+    status=models.CharField(max_length=20,choices=STATUS_CHOICES,default='pending')
     created_at=models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
