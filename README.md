@@ -25,7 +25,19 @@ Endpoint | Method | Description |
 /api/tasks/<id>/ | PUT | Update task |
 
 /api/tasks/<id>/ | DELETE | Delete task |
+# Sample responses
+in JSON
+{
+"id":1,
+"title":"Project",
+"description":"Task Manager Project with 7 API end Points",
+"due_date":"2026-04-20
+"status":"completed",
+"created_at":"2026-04-11T21:37:43.163827Z
+}
 # Setup
 pip install -r requirements.txt
+
 python manage.py migrate
+
 python manage.py runserver
