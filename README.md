@@ -11,7 +11,9 @@ A REST API built with Django REST Framework and MySQL.
 - Users can only access their own tasks
 # API Endpoints
 Endpoint | Method | Description |
+
 /api/register/ | POST | Register new user |
+
 /api/login/ | POST | Login and get token |
 /api/tasks/ | GET | List all tasks |
 /api/tasks/ | POST | Create new task |
