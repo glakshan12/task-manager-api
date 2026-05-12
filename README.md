@@ -1,5 +1,5 @@
 # Task Manager REST API
-A REST API built with Django REST Framework and MySQL.
+A backend REST API built using Django REST Framework and MySQL to manage user-specific tasks securely.
 # Tech Stack
 - Python
 - Django
@@ -16,9 +16,9 @@ Endpoint | Method | Description |
 
 /api/login/ | POST | Login and get token |
 
-/api/tasks/ | GET | List all tasks |
-
 /api/tasks/ | POST | Create new task |
+
+/api/tasks/ | GET | List all tasks |
 
 /api/tasks/<id>/ | GET | Get single task |
 
