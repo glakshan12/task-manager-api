@@ -15,10 +15,15 @@ Endpoint | Method | Description |
 /api/register/ | POST | Register new user |
 
 /api/login/ | POST | Login and get token |
+
 /api/tasks/ | GET | List all tasks |
+
 /api/tasks/ | POST | Create new task |
+
 /api/tasks/<id>/ | GET | Get single task |
+
 /api/tasks/<id>/ | PUT | Update task |
+
 /api/tasks/<id>/ | DELETE | Delete task |
 # Setup
 pip install -r requirements.txt
