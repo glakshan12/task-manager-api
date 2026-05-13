@@ -13,8 +13,8 @@ from .serializers import UserRegisterSerializer, TaskSerializer
 # View 1 - Register
 class RegisterView(generics.CreateAPIView): #pre built it already know how to create a objects(crud operations)
     queryset = User.objects.all()#tell which objects to work with
-    serializer_class = UserRegisterSerializer#tells which serializer is used for this view, vew need a serializers to validate incoming data and save it
-    permission_classes = [permissions.AllowAny]#any one can access the end point tokes(becuase when new user create they wont have any token)
+    serializer_class = UserRegisterSerializer#tells which serializer is used for this view, we need a serializers to validate incoming data and save it
+    permission_classes = [permissions.AllowAny]#any one can access the end point tokens(becuase when new user create they wont have any token)
 
 
 # View 2 - Login
