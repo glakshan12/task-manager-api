@@ -22,17 +22,17 @@ class LoginView(APIView):
     permission_classes = [permissions.AllowAny]
 
     def post(self, request):
-        username = request.data.get('username')
+        username = request.data.get('username')#check username and password
         password = request.data.get('password')
 
         user = authenticate(username=username, password=password)
 
         if user:
-            token, created = Token.objects.get_or_create(user=user)
+            token, created = Token.objects.get_or_create(user=user)#create the token and give to user if username and password is correct
             return Response({'token': token.key})
         
         return Response(
-            {'error': 'Invalid credentials'},
+            {'error': 'Invalid credentials'},#if invalid credentials means it shows status code as 401
             status=status.HTTP_401_UNAUTHORIZED
         )
 
@@ -43,9 +43,9 @@ class TaskListCreateView(generics.ListCreateAPIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
-        return Task.objects.filter(user=self.request.user)
+        return Task.objects.filter(user=self.request.user)#return the tasks only to the particular user
 
-    def perform_create(self, serializer):
+    def perform_create(self, serializer):#save the user task
         serializer.save(user=self.request.user)
 
 
